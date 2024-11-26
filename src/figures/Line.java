@@ -5,26 +5,29 @@ public class Line {
 
     public Line(){}
 
-    public Line(int length) {
-        this.length = length;
+    public Line(int length){
+        this.length=length;
     }
-     /// METHOD THAT DRAWS LINE
-    public void drawLine() {
-        if(length <=1) {
-            System.out.print("line length must be > 1");
+
+    //method draws line
+    public void drawLine(){
+        if(length <= 1){
+            System.out.println("Line length ");
         } else {
             System.out.println("Drawing Line with length: " + length + "[u]" + "\n");
-            for (int i = 1; i <= length; i++){
+            for(int i = 1; i<= length; i++){
                 System.out.print(" * ");
             }
+            System.out.println("\n");
+            System.out.println("---------------------------------");
         }
     }
 
-    public int getLength() {
-        return  length;
+    public int getLength(){
+        return length;
     }
 
-    public void  setLength(int length){
+    public void setLength(int length){
         this.length = length;
     }
 }
