@@ -1,6 +1,6 @@
 package figures;
 
-public class Line {
+public class Line{
     private int length;
 
     public Line(){}
