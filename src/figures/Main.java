@@ -3,12 +3,15 @@ import figures.Square;
 
 import java.util.Scanner;
 
-public class Main{
+public class Main {
     public static void main(String[] args) {
         int option = 0;
         Scanner scanner = new Scanner(System.in);
         Line line = new Line();
+        Square square = new Square();
+
         do{
+            System.out.println("---Figures System---");
             System.out.println("1. Create Line");
             System.out.println("2. Create Square");
             System.out.println("3. Print Line");
@@ -17,20 +20,27 @@ public class Main{
             option=scanner.nextInt();
             switch (option){
                 case 1:
-                    System.out.println("Please enter : ");
+                    System.out.println("Please enter Line length: ");
                     int lineLength = scanner.nextInt();
                     line.setLength(lineLength);
-                    break;
                 case 2:
-                    line.drawLine();
+                    System.out.println("Please enter Square length: ");
+                    int SquareLength = scanner.nextInt();
+                    square.setLength(SquareLength);
                     break;
                 case 3:
+                    line.drawLine();
+                    break;
+                case 4:
+                    square.PrintSquare();
+                    break;
+                case 5:
                     System.out.println("xxxxx Exiting System xxxx");
                     break;
                 default:
                     System.out.println("Please enter a valid option");
                     break;
             }
-        }while(option != 3);
+        }while(option != 5);
     }
 }
